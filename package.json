@@ -13,6 +13,7 @@
   "scripts": {
     "build": "npm run css",
     "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o assets/css/",
+    "css-lint": "stylelint scss/ --cache --cache-location node_modules/.cache/.stylelintcache",
     "css-prefix": "postcss --replace assets/css/starter.css --use autoprefixer --map",
     "css-purge": "purgecss --css assets/css/starter.css --content index.html --output assets/css/",
     "css": "npm run css-compile && npm run css-prefix",
@@ -41,6 +42,8 @@
     "nodemon": "^2.0.4",
     "postcss-cli": "^7.1.1",
     "purgecss": "^2.1.2",
-    "serve": "^11.3.0"
+    "serve": "^11.3.0",
+    "stylelint": "^13.6.0",
+    "stylelint-config-twbs-bootstrap": "^2.0.3"
   }
 }
